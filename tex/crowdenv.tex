@@ -1,0 +1,9 @@
+\begin{figure*}
+	\includegraphics[width=\textwidth]{images/improvement}
+	\caption{\label{fig:single-player-iterative-improvement}Iterative environment improvement, in terms of evacuation time, is shown from left to right. The red dots at the bottom of the environment represent the egress point. \red{MOVE THESE NUMBERS TO THE SECOND ROW OF A MULTICOL FIGURE}a)Time=13.34, b)Time= 11.58, c)Time=8.79, d)Time=8.11, e)Time=7.60}
+\end{figure*}
+
+A suite of analysis tools are made available to a player in order to visually validate their simulation results.  In particular we visualize metrics using heatmap so that the user can improve their design by identifying regions which are not performing well. The heat map is an orthographic view of the design containing all the elements(walls, doors,pillars) placed by the user and the path of all the agents. The level of crowd density of a region in the layout can be deduced by different coloured dots in the heat map. Figure~\ref{fig:single-player-iterative-improvement} is an example of a heat map which shows the orthographic view of walls, doors, and pillars in the layout with aggregate crowds dynamics displayed as heat traces. If a region is not performing well, it will become congested and crowd density will rise and the region will become more red. A player can be improve the design to reduce the highlighted areas in the design.
+
+\red{are there other metrics to talk about here?  I mean evacuation time and average evacuation time are not that different}We have also provided other calculated metrics such as average evacuation time for an agent in the crowd, to help the user for detailed analysis of the crowd.
+

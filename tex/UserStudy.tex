@@ -1,0 +1,42 @@
+We hypothesize that with the gamification of a complex combinatorial problem in architectural design provides a user an innovative means to improve their design and gradually reach optimality. We also hypothesize that competitive co-design is an effective solution to the non-convex optimization problem that is crowd-aware environment design for efficient evacuation. We have conducted some user studies below to evaluate our hypothesis.
+
+\subsection{User Study}
+For our first hypothesis, we evaluated the evacuation times of certain user iterations for each of the 54 combinations of crowd configuration parameters. We have considered only the data of an user who has viewed the heat map for every iteration. For each combination of crowd configuration parameters we were able to get an average of 14 user's iterative data. For the second hypothesis, for each of the game level and each of the crowd parameter combination we have plotted all the evacuation times of user simulation runs in order of time of execution. We have considered the data of the users who have viewed the best scorer's heat map. 
+
+Each player is identified by a unique id assigned to him/her. Some of the user data we gathered are Player id, User placed architectural element positions, Total evacuation time of the simulation, User choices of crowd configuration parameters (LoS, LoA, LoH), User's choice of viewing the heat map, User's choice of viewing the Top Scorer's heat map. 
+
+\subsubsection{Procedure}
+We have provided the user an existing layout at the start of the level which helps us increase the difficulty as the user gradually reaches higher levels. Users cannot manipulate these already placed elements. Users can create a wall by clicking on two points in the layout. Pillars can be created by clicking at a point, on the floor, where the player want to place the pillar. The radius of the pillar can be changed by playing around with the slider in the creation menu. Doors can be created by clicking on the walls where the user wants to place the door. Walls, doors and pillars created by the user can be deleted by selecting them again. There are keyboard keys assigned to increase or decrease the width of the wall to be placed. Walls can be moved around by clicking them and using the arrows keys or by dragging them with the use of a mouse.
+
+There are several constraints associated with each element in the layout. First of all the users cannot modify the elements of the layout existing when the level started. Users can only manipulate the elements they added to the existing layout. There are a fixed number of walls, pillars and doors that can be placed by the user.  Walls can be placed only if it forms an enclosed space meaning that a wall must be touching walls on either end. A wall cannot be made to pass through the outside wall. In case the wall is placed incorrectly by the player, the wall will be marked red, and the player will not be able to start the simulation until the errors are rectified. If the width of the wall is less than two units, the wall will not be created.
+
+
+\subsection{Results}
+In order to evaluate our hypotheses, we hosted our game on our website and asked people to play the game. We collected data for different users and for different levels. Analysing and comparing the results, we observed the following.
+
+After plotting the evacuation times of each user iterations for each level and each combination of crowd configurations, we have found a gradually decreasing curve of evacuation time in 72.34\% of all the user cases. In Figure~\ref{fig:single-player-iterative-improvement} we demonstrate an example of iterative improvement of a design by a player using the crowd configuration Los=crowd density of 1.09-2.17, LoA=High, LoH=Low. We have proved our first hypothesis for most of the cases of user play data we have received. \red{WE REALLY NEED STATS TO SAY WE PROVED SOMETHING.  IS THERE AN ANALYSIS FOR SHOWING IMPROVEMENT FOR ALL USERS}
+
+For the second hypothesis, it was found that the evacuation times of different players viewing the current best scorer's heat map, gradually decreased and converged towards optimality. The curve formed by these players is very similar to that of a fitness function in computational optimization strategies. Figure~\ref{fig:codesign-incremental-improvement} is an example of this curve in which several player's iteratively improved a design by using the current best player's analyses and environment layout information. The changes these players made are shown in Figure~\ref{fig:codesign-heatmap-changes}. We have found this hypothesis true in 74.27\% of all cases of different combinations of crowd parameters.\red{ANY ANALYSIS TO SHOW HOW SIGNIFICANT THIS IS< OR MAYBE AT LEAST SOME SUMMARY STATS, OR A QUICK ANOVA, CHI LIKES ANOVAS - LIKE NO CODESIGN GROUP VS CODESIGN GROUP OR SOMETHING}. 
+
+\begin{figure} 
+\centering
+\includegraphics[width=\linewidth]{images/graphex}
+  \caption{\label{fig:codesign-incremental-improvement}Evacuation times of players who incorporated the current best player's  heatmap (which changes with each new winner) for the crowd configuration LoS=F,LoA=High,LoH=Low in level 1}
+\end{figure}
+
+\begin{figure}
+\centering
+	\includegraphics[width=\linewidth]{images/improvement2}
+	\caption{\label{fig:codesign-heatmap-changes}Collaborative Environment improvement: The red dots at the bottom represents the exit doors. a)time=9.342, b)time=8.583}
+\end{figure}
+
+\subsection{System Usability Results}
+We are using the System Usability Scale to calculate the System Usability Scale(SUS) score~\cite{JBrookeSUS}. We received feedback from 12 players and calculated the score depending upon their responses. Our average usability score is 60 out of a scale of 100. Hence, our usability is average but there is a lot of scope for improvement. \red{IS THERE UPDATED DATA FOR THIS, MAYBE A BETTER SCORE ;)}
+
+
+
+
+
+
+
+
