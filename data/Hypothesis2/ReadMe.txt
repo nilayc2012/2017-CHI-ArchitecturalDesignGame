@@ -1,0 +1,24 @@
+The file names are chosen is below format
+
+<Level Name>-<LOS><LOA><LOH>.m
+
+Los types-
+0 - A
+1 - B
+2 - C
+3 - D
+4 - E
+5 - F
+
+LOA types -
+0 - Low
+1 - Medium
+2 - High
+
+LOH types -
+0 - Low
+1 - Medium
+2 - High
+
+Example -
+Level1-000.m contains user play data for the combination Los=A,LOA-Low,LOH-Low

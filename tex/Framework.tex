@@ -1,0 +1,33 @@
+\begin{figure*}
+	\centering  \includegraphics[width=\textwidth]{images/Framework/FrameworkOverview.png}
+	\caption{\label{fig:framework-overview}The Game Framework overview}
+\end{figure*}
+
+The game design gives players the tools to construct, modify, and analyze environment designs.  A player can add elements to the provided floor design, such as doors, walls, and pillars. The player's goal, and success criteria, is to create an efficient design that evacuates all agents in the shortest possible time. The player can visualize the simulation and analyze the aggregate crowd dynamics using heat maps to identify regions for improvement. The player can use these metrics to improve the current design. By repeating a level and improving the evacuation time, the level layout can converge to an optimal design.
+
+The following list provides an overview of the modules in the framework. The modules and their relationships are also outlined in Figure~\ref{fig:framework-overview}.
+
+\begin{itemize} 
+\item \textbf{Static Initial Layout} - A architect or designer can designate static elements of the gamified environment - partially imposing architectural constraints. The player can not modify these elements in the existing layout. Users will have to place the elements provided to this layout. It is possible for the architect or designer to design each subsequent level such that the environment has increased complexity of the existing design or is adds portions to the design.  This means a player may work on a larger environment in which they can modify a portion, or the player may work from the micro to macroscopic portions of a larger design task.
+
+\item \textbf{Player Modified Layout} - There are certain elements available to the user to add to the layout. There are several elements which may be added or modified such as walls, pillars, and doors. Access to these modification and creation tools may be constrained by the architect or designer. 
+
+\item \textbf{Crowd Behaviour Configuration} - The player can configure the different 
+characteristics of the crowd to capture new behaviours and dynamics for which the environments fitness is tested in terms of evacuation.  A summary of these crowd parameters are listed below, in depth details are provided in the Crowd Configuration and Simulation Section - 
+
+\begin{enumerate}
+\item \textbf{Level of Service (LoS)} - The number of people in a square unit of area that spawn when the level starts, or crowd density.
+
+\item \textbf{Level of Aggression} - The distribution of crowd member speed and acceleration.
+
+\item \textbf{Level of Homogeneity} - The distribution of crowd member width, or size.
+\end{enumerate}
+
+These parameters provide players with up to 54 unique combinations of crowd behaviour and dynamics.
+
+\item \textbf{Crowd Simulation} - Once the player finalizes their environment configurations, they can run the simulation. The crowd will begin evacuating the layout towards exits defined by the architect or designer. An agent based model using Unity3D is used for agent steering. The Unity 3D Mechanim system handles character animation and the Navmesh system handles path finding. Once the entire crowd reaches their destination, the simulation ends.
+
+\item \textbf{Validation} - Once the simulation ends, the game displays the score based on the total evacuation time. The winning criteria, lower total evacuation time, determines where in the leader board the player is placed. In this phase, the player can visualize and analyze their results, in terms of crowd dynamics, using heat maps.
+
+\item \textbf{Co-Design} - Players are given the ability to view other players designs and their performances. They may use various analytics to improve designs from a high scoring player. Co-design allows the design task to be tackled from multiple perspectives while converging on optimal designs.
+\end{itemize}
